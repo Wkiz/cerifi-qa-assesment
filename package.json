@@ -19,11 +19,15 @@
   ],
   "author": "Alexis Erazo",
   "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/definitions"
+  },
   "bugs": {
     "url": "https://github.com/TatianaCerifi/cerifi-qa-assesment/issues"
   },
   "homepage": "https://github.com/TatianaCerifi/cerifi-qa-assesment#readme",
   "dependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.13.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }

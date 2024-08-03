@@ -1,10 +1,11 @@
 # QA Automation Assessment
 
-Welcome to the QA Automation assessment. You will be testing a fictional e-commerce application, SauceDemo, to ensure its functionality and user experience are robust.
+This is an automation BDD framework, that tests the [saucedemo.com](https://www.saucedemo.com/) page. It is created with Cypress tool.
 
-## Challenge
-
-We would like you to write end-to-end (E2E) tests for the SauceDemo application at [SauceDemo](https://www.saucedemo.com/) using Cypress. You have the freedom to choose a design pattern that you believe is suitable for this project. Your design choices will be assessed in the justification phase, so be mindful of your decisions.
+## Tools
+-  Cypress.
+-  JavaScript.
+-  Cucumber.
 
 ## Objectives
 

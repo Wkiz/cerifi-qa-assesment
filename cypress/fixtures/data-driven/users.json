@@ -1,0 +1,44 @@
+[
+    {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "firstname": "Alexis",
+        "lastname": "Erazo",
+        "zipcode": "760003"
+    },
+    
+    {
+        "username": "locked_out_user",
+        "password": "secret_sauce"
+    },
+
+    {
+        "username": "problem_user",
+        "password": "secret_sauce"
+    },
+
+    {
+        "username": "performance_glitch_user",
+        "password": "secret_sauce"
+    },
+
+    {
+        "username": "error_user",
+        "password": "secret_sauce"
+    },
+
+    {
+        "username": "visual_user",
+        "password": "secret_sauce"
+    },
+
+    {
+        "username": "non_pass_user",
+        "password": ""
+    },
+
+    {
+        "username": "",
+        "password": "non_user"
+    }
+]
