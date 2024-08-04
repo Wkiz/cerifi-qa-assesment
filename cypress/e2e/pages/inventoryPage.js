@@ -69,6 +69,9 @@ class inventoryPage {
     clickCartList() {
         cy.get(BUTTON_GO_CART).click();
         cy.get(TITLE_SELECTOR).should("be.visible").contains('Your Cart');
+    }
+
+    clickContinueShopping() {
         cy.get(BUTTON_CONTINUE_SHOPPING).click();
         cy.get(TITLE_SELECTOR).should("be.visible").contains('Products');
     }

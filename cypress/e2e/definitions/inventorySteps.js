@@ -17,6 +17,7 @@ Then('I validate the inventory page', () => {
     inventoryPage.addAllProductsToCart();
     inventoryPage.removeAllProductsFromCart();
     inventoryPage.clickCartList();
+    inventoryPage.clickContinueShopping();
 });
 
 Then('I should experiment delay showing inventory page', () => {
