@@ -1,4 +1,4 @@
-@loginValidate
+@loginValidation
 Feature: Login validation
 
 Scenario: Login test validation with standard user

@@ -28,7 +28,7 @@ class homePage{
     }
 
     validateErrorMessage(message) {
-        cy.get(ERROR_MESSAGE_SELECTOR).should("be.visible").contains(message)
+        cy.get(ERROR_MESSAGE_SELECTOR).should("be.visible").contains(message);
     }
 
     completeLogin(username, password) {
