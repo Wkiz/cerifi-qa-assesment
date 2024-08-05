@@ -1,63 +1,56 @@
-# QA Automation Assessment
+# Alexis Erazo Aristizabal
 
-This is an automation BDD framework, that tests the [saucedemo.com](https://www.saucedemo.com/) page. It is created with Cypress tool.
+## QA Automation Assessment
 
-## Tools
+This is an automation BDD framework, that tests the [saucedemo.com](https://www.saucedemo.com/) page. 
+
+## Used tools
 -  Cypress.
--  JavaScript.
 -  Cucumber.
+-  Page Object Model (POM).
+-  JavaScript.
 
-## Objectives
+## Setup and run instructions
 
-- **Technical Skills**: Demonstrate your proficiency with Cypress by automating tests for the application.
-- **Prioritization**: Show how you prioritize features to test, ensuring the most critical functionalities are covered.
-- **Future-proofing**: Illustrate how your framework can be scalable and maintainable for future enhancements.
-- **Documentation**: Include detailed documentation on how to set up and run your tests, ensuring that an interdepartmental team can easily follow your instructions.
+1. **Clone Repository:** Clone the repository, using `git clone` in Terminal/command prompt.
+2. **Install all Dependencies:** Install all the dependencies with `npm install`
+3. **Using Cypress GUI:** If you want to run tests with Cypress GUI, use `npm run cypress:open` to open the Cypress GUI and run tests .feature per .feature.
+4. **Using Command Prompt:** Use `npm run cypress:run-all` to run all tests headless.
 
-## Instructions
+## Justification of Design Choices
 
-1. **Fork and Clone**:
-   - Fork this repository to your GitHub account.
-   - Clone the forked repository to your local machine.
+### Page Object Model (POM)
 
-2. **Create a Branch**:
-   - Create a new branch named `firstName-lastName` (e.g., `john-doe`).
+- **Maintainability:**
 
-3. **Write Your Scripts**:
-   - Write your Cypress test scripts in the `cypress/e2e` folder.
-   - Design and implement a framework that you believe is appropriate for the project.
+    - **Centralized Maintenance:** All the locators and methods for interacting with a page are centralized in one place. If the UI changes, only the page object class needs to be updated.
+    - **Reduced Code Duplication:** Common actions and elements are defined once in the page object class and reused across multiple tests, reducing redundancy.
+    
+- **Readability and Clarity:**
 
-4. **Documentation**:
-   - Provide comprehensive documentation on how to run the tests.
-   - Justify your design choices and explain how your framework can accommodate future needs.
+    - **Clear Test Scripts:** Tests are more readable and concise since they call methods from the page object classes instead of interacting directly with the UI elements.
+    - **Logical Organization:** UI elements and their interactions are logically organized, mirroring the structure of the application.
 
-5. **Commit and Push**:
-   - Commit your changes with a meaningful message.
-   - Push your branch to your GitHub repository.
+- **Reusability:**
 
-6. **Pull Request**:
-   - Submit a pull request to the original repository.
+    - **Reusable Components:** Page object classes can be reused across different test cases, enhancing code reuse and reducing the effort required to write new tests.
+    
+- **Separation of Concerns:**
 
-## Considerations
+    - **Test Logic and UI Separation:** POM separates the test logic from the UI structure. Test scripts focus on the test logic, while the page objects handle the UI interactions.
+    - **Encapsulation:** Page objects encapsulate the details of the UI, providing a clear interface for test scripts to interact with.
+    
+- **Scalability:**
 
-- Focus on creating a robust and maintainable test suite.
-- Think about how you would structure your tests to cover critical functionalities.
-- Ensure your documentation is clear and detailed enough for an interdepartmental team to understand and follow.
+    - **Scalable Framework:** The modular nature of POM makes it easy to scale the test automation framework. New pages or components can be added without impacting existing tests.
+    
+- **Improved Collaboration:**
 
-## Example Setup Instructions
+    - **Team Collaboration:** By abstracting the UI interactions, POM allows test developers to focus on writing test logic, while developers familiar with the application’s UI can create and maintain the page objects.
 
-Include the following in your documentation:
-
-1. **Installation**:
-   - Steps to install Cypress and any other dependencies.
-
-2. **Running Tests**:
-   - Commands to execute the test suite.
-
-3. **Framework Explanation**:
-   - A brief overview of the design pattern used and its benefits.
-
-4. **Future-proofing**:
-   - Explain how your framework can be extended or maintained as the application grows.
-
-Good luck! 🍀
+### Framework Adaptability for Future Needs
+- **Scalability:** The combination of Cypress and POM allows the framework to scale easily, with new pages and components added without impacting existing tests.
+- **Extensibility:** Modular JavaScript and POM enable easy integration of new libraries or tools, such as performance, accessibility, or visual testing plugins.
+- **Maintainability:** Using Cucumber for natural language test definitions and POM for UI logic structuring ensures easy maintenance and updates.
+- **Collaboration:** Cucumber enhances collaboration between technical and non-technical teams by translating requirements directly into tests.
+- **Continuous Automation:** Cypress supports CI/CD tools, enabling automatic test integration and execution with each code change, ensuring rapid error detection and continuous feedback.
