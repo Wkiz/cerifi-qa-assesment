@@ -10,7 +10,7 @@ Given('I open saucedemo homepage', () => {
 
 When('I submit login with a {string} user', (user) => {
     cy.fixture("data-driven/users").then((data) => {
-        let userData = getUserByKeyword(data, user)
+        let userData = getUserByKeyword(data, user);
         if (!user.includes("non")) {
             homePage.completeLogin(userData.username, userData.password);
         } else {

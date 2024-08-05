@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import inventoryPage from '../pages/inventoryPage';
-import cartPage, { removeBoltTshirtProduct } from '../pages/cartPage';
+import cartPage from '../pages/cartPage';
 
 And('I add all products to cart', () => {
     inventoryPage.addAllProductsToCart();
